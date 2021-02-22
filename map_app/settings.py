@@ -156,7 +156,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'assets'
+    STATIC_ROOT = 'staticfiles'
     STATICFILES_DIR = (
         os.path.join(BASE_DIR, 'static'),
     ) 
