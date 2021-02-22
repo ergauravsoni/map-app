@@ -126,14 +126,14 @@ USE_TZ = True
 LOGIN_URL = '/users/login/'
 
 STATIC_URL = '/static/'
-"""STATICFILES_DIRS = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')"""
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 BOOTSTRAP3 = {
     'include_jquery': True,

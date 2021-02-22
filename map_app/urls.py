@@ -23,3 +23,5 @@ urlpatterns = [
     path('', include(('maps_app.urls', 'maps_app'), namespace='maps_app')),
     path('users/', include(('users.urls', 'users'), namespace='users')),
 ]
+
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
