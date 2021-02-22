@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class='jumbotron' style="background-color: black; color: white;">
+    <h1>Dekho Jana Sekho India</h1>
+</div>
+{% endblock header %}
+
+{% block content %}
+<h2>
+    {% if user.is_authenticated %}
+    Hello, {{ user.username }}
+    {% else %}
+    <a href="{% url 'users:register' %}">Register an account</a>
+    {% endif %}
+</h2>
+<h2>
+    Play Games and Explore India.
+</h2>
+{% endblock content %}
