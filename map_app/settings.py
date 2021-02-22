@@ -14,10 +14,6 @@ import os
 
 from pathlib import Path
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
-mimetypes.add_type("text/js", ".js", True)
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -160,7 +156,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
+    STATIC_ROOT = 'static'
     STATICFILES_DIR = (
         os.path.join(BASE_DIR, 'static'),
     ) 
