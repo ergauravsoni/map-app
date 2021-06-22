@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'assets/css/quiz.css' %}">
+</head>
+
+<body>
+    <h1>Karnataka Quiz</h1>
+    <hr>
+    <div>
+        <p> 1.When did the construction of Bengaluru palace begin?</p>
+        <input type="radio" name="question1" id="correct1" /> A.April 1874 <br>
+        <input type="radio" name="question1" /> B.May 1878 <br>
+        <input type="radio" name="question1" /> C.June 1745 <br>
+        <input type="radio" name="question1" /> D.May 1899 <br>
+    </div>
+    <hr>
+    <div>
+        <p> 2.Identify the state bird of Karnataka</p>
+        <input type="radio" name="question2" /> A.Peacock <br>
+        <input type="radio" name="question2" /> B.Eagle <br>
+        <input type="radio" name="question2" id="correct2" /> C.Indian roller <br>
+        <input type="radio" name="question2" /> D.Owl <br>
+    </div>
+    <hr>
+    <div>
+        <p>3.What is the state dance of Karnataka?</p>
+        <input type="radio" name="question3" />A.Bharatnatyam <br>
+        <input type="radio" name="question3" id="correct3" />B.Dollu kunitha <br>
+        <input type="radio" name="question3" />C.Yakshagana <br>
+        <input type="radio" name="question3" />D.Hip-hop <br>
+
+    </div>
+    <hr>
+    <div>
+        <p> 4.Identify the main kannadiga male costume</p>
+        <input type="radio" name="question4" id="correct4" />A.Panchey <br>
+        <input type="radio" name="question4" />B.T-shirt <br>
+        <input type="radio" name="question4" />C.Trousers <br>
+        <input type="radio" name="question4" />D.Neck tie <br>
+
+    </div>
+    <hr>
+    <div>
+        <p> 5. What is the staple food of Karnataka ?</p>
+        <input type="radio" name="question5" />A.Ragi <br>
+        <input type="radio" name="question5" id="correct5" />B.Rice <br>
+        <input type="radio" name="question5" />C.Wheat <br>
+        <input type="radio" name="question5" />D.Jowar <br>
+    </div>
+    <hr>
+    <div>
+        <p> 6.Who is the author of state anthem of Karnataka?</p>
+        <input type="radio" name="question6" id="correct6" />A.Kuvempu <br>
+        <input type="radio" name="question6" />B. Shivram karanth <br>
+        <input type="radio" name="question6" />C. Bendre <br>
+        <input type="radio" name="question6" />D. P.Tejaswi <br>
+    </div>
+    <hr>
+    <input type="submit" name="submit" id="submit" value="Submit Quiz" onclick="result()">
+
+    <!-- js -->
+    <script type="text/javascript">
+        function result() {
+            //body
+            var score = 0;
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                score++;
+            }
+            if (document.getElementById('correct4').checked) {
+                score++;
+            }
+            if (document.getElementById('correct5').checked) {
+                score++;
+            }
+            if (document.getElementById('correct6').checked) {
+                score++;
+            }
+            document.write("<link rel='stylesheet' href='{% static 'assets/css/quiz.css' %}'><h1 style='margin:0;padding:10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);'>Your score is: " 
+                + score + "<br>" 
+                + "<a href='{% url 'maps_app:kt' %}'><input type='submit' name='submit' id='submit' value='Go Back'></a></h1>");
+        }
+    </script>
+</body>
+
+</html>

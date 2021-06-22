@@ -17,3 +17,7 @@ def puzzle(request):
 @login_required
 def kt(request):
     return render(request,'kt.html')
+
+@login_required
+def quiz(request):
+    return render(request,'quiz.html')

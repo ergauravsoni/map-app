@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 100;
+  font-family: "Segoe UI", Calibri, Arial;
+}
+h1 {
+  background-color: black;
+  color: white;
+}
+p {
+  font-weight: bold;
+}
+input {
+  font-size: large;
+  text-align: center;
+  border-color: rgb(79, 238, 79);
+  background-color: rgb(79, 238, 79);
+  color: black;
+}
